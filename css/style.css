@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.kanban {
+	display: flex;
+	padding: 30px;
+	width: 750px;
+	background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+	border-radius: 5px;
+}
+
+.kanban * {
+	font-family: 'Poppins', sans-serif;
+}
+
+.kanban-column {
+	flex: 1;
+}
+
+.kanban-column:not(:last-child) {
+	margin-right: 30px;
+}
+
+.kanban-column-title {
+	margin-bottom: 20px;
+	font-size: 30px;
+	color: white;
+	user-select: none;
+}
+
+.kanban-item-input {
+	padding: 10px 15px;
+	box-sizing: border-box;
+	background: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.kanban-dropzone {
+	height: 10px;
+	transition: background 0.15s, height 0.15s;
+}
+
+.kanban-dropzone--active {
+	height: 20px;
+	background: rgba(0, 0, 0, 0.25);
+}
+
+.kanban-add-item {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: white;
+	background: rgba(0, 0, 0, 0.1);
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
