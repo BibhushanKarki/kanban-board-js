@@ -58,7 +58,7 @@ export default class KanbanAPI {
 
       // For Deleting the item from it's current column
 
-      currentColumn.items.splice(currentColumn.items.items.indexOf(item),1);
+      currentColumn.items.splice(currentColumn.items.indexOf(item),1);
 
       // For moving item into it's new column and position
 
