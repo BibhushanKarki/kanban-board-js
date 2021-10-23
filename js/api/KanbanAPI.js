@@ -8,7 +8,7 @@ export default class KanbanAPI {
     return column.items;
   }
 
-  static InsertItem(columnID, content) {
+  static InsertItem(columnId, content) {
     const data = read();
     const column = data.find(column => column.id == columnId);
     const item = {
@@ -67,7 +67,21 @@ export default class KanbanAPI {
     save(data);
 
   }
+  static deleteItem(itemId) {
+		const data = read();
+
+		for (const column of data) {
+			const item = column.items.find(item => item.id == itemId);
+
+			if (item) {
+				column.items.splice(column.items.indexOf(item), 1);
+			}
+		}
+
+		save(data);
+	}
 }
+
 
 function read() {
   const json = localStorage.getItem('kanban-data');
